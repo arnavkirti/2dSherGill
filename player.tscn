@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://df8kdx2wkctpt"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_s63j1"]
+[ext_resource type="Texture2D" uid="uid://cy0ndsbaqkx7c" path="res://characters/happy_boo/png-transparent-dog-courage-cartoon-drawing-dog-purple-comics-animals-thumbnail-removebg-preview.png" id="3_f2bg3"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s5lc6"]
+radius = 16.0
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_s63j1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.00001, -14.75)
+scale = Vector2(0.166667, 0.166295)
+texture = ExtResource("3_f2bg3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+texture_filter = 1
+position = Vector2(-10, -2)
+shape = SubResource("CircleShape2D_s5lc6")

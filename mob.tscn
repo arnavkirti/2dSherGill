@@ -1,0 +1,22 @@
+[gd_scene load_steps=5 format=3 uid="uid://dmo2qmnmotv47"]
+
+[ext_resource type="Script" path="res://mob.gd" id="1_5fg85"]
+[ext_resource type="Texture2D" uid="uid://bvcf732owi55x" path="res://characters/slime/images__1_-removebg-preview.png" id="1_llvkc"]
+
+[sub_resource type="GDScript" id="GDScript_o444h"]
+script/source = "extends Sprite2D
+"
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_5sch2"]
+
+[node name="mob" type="CharacterBody2D"]
+script = ExtResource("1_5fg85")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-7, -5)
+scale = Vector2(0.304006, 0.283422)
+texture = ExtResource("1_llvkc")
+script = SubResource("GDScript_o444h")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_5sch2")
